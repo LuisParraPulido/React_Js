@@ -5,13 +5,14 @@
   height: 100px;
   width: 100%;
   display: flex;
+  justify-content: space-between;
 }
 .footer a {
   color: white;
   text-decoration: none;
   font-size: 14px;  
-  padding-left: 30px;  
-
+  padding-left: 30px; 
+  padding-right: 30px;
 }
 .footer a:hover {
   text-decoration: underline;
