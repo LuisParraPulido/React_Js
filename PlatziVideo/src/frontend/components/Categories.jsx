@@ -1,10 +1,9 @@
-/* eslint-disable jsx-quotes */
 import React from 'react';
 import '../assets/styles/components/Categories.scss';
 
 const Categories = ({ children, title }) => (
-  <div className="categories">
-    <h2 className="carousel__title">{title}</h2>
+  <div className='categories'>
+    <h2 className='carousel__title'>{title}</h2>
     {children}
   </div>
 );

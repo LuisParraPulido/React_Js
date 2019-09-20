@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-wrap-multilines */
-/* eslint-disable jsx-quotes */
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -21,31 +19,22 @@ const CarouselItem = (props) => {
     props.deleteFavorite(itemId);
   };
   return (
-    <div className="carousel-item">
-      <img className="carousel-item__img" src={cover} alt={title} />
-      <div className="carousel-item__details">
+    <div className='carousel-item'>
+      <img className='carousel-item__img' src={cover} alt={title} />
+      <div className='carousel-item__details'>
         <div>
           <Link to={`/player/${id}`}>
             <img
               src={playIcon}
-              alt="play"      
-            />          
-          </Link>
-          {isList ? 
-            <img
-              src={removeIcon}
-              alt="remove"
-              onClick={() => handleDeleteFavorite(id)}
-            /> :
-            <img
-              src={plusIcon}
-              alt="añadir"
-              onClick={handleSetFavorite}
+              alt='play'
             />
-          }
+          </Link>
+          {isList ?
+            <img src={removeIcon} alt='remove' onClick={() => handleDeleteFavorite(id)} /> :
+            <img src={plusIcon} alt='añadir' onClick={handleSetFavorite} />}
         </div>
-        <p className="carousel-item__details--title">{title}</p>
-        <p className="carousel-item__details--subtitle">
+        <p className='carousel-item__details--title'>{title}</p>
+        <p className='carousel-item__details--subtitle'>
           {`${year} ${contentRating} ${duration}`}
         </p>
       </div>

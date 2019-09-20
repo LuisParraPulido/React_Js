@@ -1,7 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable react/button-has-type */
-/* eslint-disable react/jsx-one-expression-per-line */
-/* eslint-disable jsx-quotes */
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -32,39 +28,42 @@ const Login = (props) => {
   return (
     <>
       <Header isLogin />
-      <section className="login">
-        <section className="login__container">
+      <section className='login'>
+        <section className='login__container'>
           <h2>Inicia sesión</h2>
-          <form className="login__container--form" onSubmit={handleSubmit}>
+          <form className='login__container--form' onSubmit={handleSubmit}>
             <input
-              name="email"
-              className="input"
-              type="text"
-              placeholder="Correo"
+              name='email'
+              className='input'
+              type='text'
+              placeholder='Correo'
               onChange={handleInput}
             />
             <input
-              name="password"
-              className="input"
-              type="password"
-              placeholder="Contraseña"
+              name='password'
+              className='input'
+              type='password'
+              placeholder='Contraseña'
               onChange={handleInput}
             />
-            <button className="button">Iniciar sesión</button>
-            <div className="login__container--remember-me">
+            <button className='button' type='button'>Iniciar sesión</button>
+            <div className='login__container--remember-me'>
               <label>
-                <input type="checkbox" id="cbox1" value="checkbox" />
+                <input type='checkbox' id='cbox1' value='checkbox' />
                 Recuérdame
               </label>
-              <a href="/">Olvidé mi contraseña</a>
+              <a href='/'>Olvidé mi contraseña</a>
             </div>
           </form>
-          <section className="login__container--social-media">
-            <div><img src={googleIcon} alt="Google" />Iniciar sesión con Google</div>
-            <div><img src={twitterIcon} alt="twitter" />Iniciar sesión con Twitter</div>
+          <section className='login__container--social-media'>
+            <div>
+              <img src={googleIcon} alt='Google' />Iniciar sesión con Google</div>
+            <div>
+              <img src={twitterIcon} alt='twitter' />Iniciar sesión con Twitter</div>
           </section>
-          <p className="login__container--register">
-            No tines ninguna cuenta {' '}
+          <p className='login__container--register'>
+            No tines ninguna cuenta
+            {' '}
             <Link to='/register'>
               Regístrate
             </Link>

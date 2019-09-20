@@ -1,4 +1,3 @@
-/* eslint-disable jsx-quotes */
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -27,34 +26,34 @@ const Register = (props) => {
   return (
     <>
       <Header isRegister />
-      <section className="register">
-        <section className="register__container">
+      <section className='register'>
+        <section className='register__container'>
           <h2>Regístrate</h2>
-          <form className="register__container--form" onSubmit={handleSubmit}>
+          <form className='register__container--form' onSubmit={handleSubmit}>
             <input
               name='name'
-              className="input"
-              type="text"
-              placeholder="Nombre"
+              className='input'
+              type='text'
+              placeholder='Nombre'
               onChange={handleInput}
             />
             <input
               name='email'
-              className="input"
-              type="text"
-              placeholder="Correo"
+              className='input'
+              type='text'
+              placeholder='Correo'
               onChange={handleInput}
             />
             <input
               name='password'
-              className="input"
-              type="password"
-              placeholder="Contraseña"
+              className='input'
+              type='password'
+              placeholder='Contraseña'
               onChange={handleInput}
             />
-            <button className="button" type='button'>Regístrarme</button>
+            <button className='button' type='button'>Regístrarme</button>
           </form>
-          <p className="register__container--inicio-sesion">
+          <p className='register__container--inicio-sesion'>
             <Link to='/login'>
               Iniciar sesión
             </Link>

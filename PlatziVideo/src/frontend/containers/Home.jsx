@@ -1,5 +1,4 @@
-/* eslint-disable react/jsx-wrap-multilines */
-/* eslint-disable jsx-quotes */
+/* eslint-disable react/jsx-props-no-spreading */
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import Header from '../components/Header';
@@ -9,39 +8,31 @@ import Carousel from '../components/Carousel';
 import CarouselItem from '../components/CarouselItem';
 import useInitialState from '../hooks/useInitialState';
 
-import '../assets/styles/App.scss';
-
 const Home = ({ myList, trends, originals }) => {
   return (
     <>
       <Header />
       <Search isHome />
       {myList.length > 0 &&
-        <Categories title="Mi Lista">
+        <Categories title='Mi Lista'>
           <Carousel>
-            {myList.map(item =>
-              <CarouselItem
-                key={item.id}
-                {...item}
-                isList
-              />
-            )}
+            {myList.map((item) => <CarouselItem
+              key={item.id}
+              {...item}
+              isList
+            />)}
           </Carousel>
         </Categories>}
 
-      <Categories title="Tendencias">
+      <Categories title='Tendencias'>
         <Carousel>
-          {trends.map(item =>
-            <CarouselItem key={item.id} {...item} />            
-          )}
+          {trends.map((item) => <CarouselItem key={item.id} {...item} />)}
         </Carousel>
       </Categories>
 
-      <Categories title="Originales de Platzi Video">
+      <Categories title='Originales de Platzi Video'>
         <Carousel>
-          {originals.map(item =>
-            <CarouselItem key={item.id} {...item} />            
-          )}
+          {originals.map((item) => <CarouselItem key={item.id} {...item} />)}
         </Carousel>
       </Categories>
 
@@ -49,7 +40,7 @@ const Home = ({ myList, trends, originals }) => {
   );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     myList: state.myList,
     trends: state.trends,

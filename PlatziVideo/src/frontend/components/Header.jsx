@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-curly-newline */
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -24,14 +23,13 @@ const Header = (props) => {
   return (
     <header className={HeaderClass}>
       <Link to='/'>
-        <img className='header__img' src={logo} alt='Platzi Video' />    
+        <img className='header__img' src={logo} alt='Platzi Video' />
       </Link>
       <div className='header__menu'>
         <div className='header__menu--profile'>
           {hasUser ?
             <img src={gravatar(user.email)} alt={user.email} /> :
-            <img src={userIcon} alt='' />
-          }
+            <img src={userIcon} alt='' />}
           <p>Perfil</p>
         </div>
         <ul>
@@ -46,8 +44,7 @@ const Header = (props) => {
                 Iniciar sesión
                 </Link>
               </li>
-            )
-          }
+            )}
         </ul>
       </div>
     </header>
